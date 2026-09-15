@@ -9,7 +9,7 @@ A fast, lightweight, and multi-threaded Command Line Interface (CLI) port scanne
 * **Multi-threading Support:** Scans multiple ports concurrently for high-speed performance.
 * **Domain Resolution:** Accepts both IP addresses and domain names (e.g., `scanme.nmap.org`).
 * **Service Detection:** Identifies standard services running on open ports using dictionary lookup.
-* **Custom Port Range:** Scans user-specified port ranges.
+*  **Clean CLI Output:** Displays active ports clear and concise directly in the terminal.
 
 ---
 
