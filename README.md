@@ -21,6 +21,8 @@ A fast, lightweight, and multi-threaded Command Line Interface (CLI) port scanne
 1. Open your terminal and clone the repository:
 ```bash
 git clone https://github.com/mohammed-ghabayn/port-scanner.git
+cd port-scanner
+python scanner.py
 ```
 
 ### 🪟 On Windows
@@ -28,6 +30,8 @@ git clone https://github.com/mohammed-ghabayn/port-scanner.git
 1. Open Command Prompt (CMD) or PowerShell and clone the repository:
 ```bash
 git clone https://github.com/mohammed-ghabayn/port-scanner.git
+cd port-scanner
+python scanner.py
 ```
 
 ## 🚀 Usage
