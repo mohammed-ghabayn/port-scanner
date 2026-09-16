@@ -1,8 +1,7 @@
 import socket
-
 from concurrent.futures import ThreadPoolExecutor
-
 import datetime
+import sys
 
 BLUE = "\033[94m"
 CYAN = "\033[96m"
@@ -48,7 +47,7 @@ def scanPort(ip,port):
            print("---------------------------------------------------------------")
          
       except:
-       pass 
+       pass
       finally:
         s.close()
        
@@ -82,12 +81,20 @@ print("\n---------------------------------------------------------------\n")
 
 print(f"{YELLOW}[*] Scanning started... Press 'Ctrl + C' to stop at any time.{RESET}")
 
+try:
+
+ # صندوق الخيوط التي  ستعمل معا في الدالة الفحص
+ with ThreadPoolExecutor(max_workers=100) as executor:
+   futures = [executor.submit(scanPort, ip, port) for port in range(1, 1024)]
+   for future in futures:
+    future.result()  # تضمن الاستجابة اللحظية لـ Ctrl + C
+
+except KeyboardInterrupt:
+    print(f"\n\n\033[91m[-] Scan cancelled by user. Exiting...\033[0m")
+    sys.exit(0)
 
 
-# صندوق الخيوط التي  ستعمل معا في الدالة الفحص
-with ThreadPoolExecutor(max_workers=100) as executor:
-   for port in range(1,1024):
-    executor.submit(scanPort,ip,port)
+
 
 print(f"{GREEN}[+] Scan completed successfully.{RESET}")   
 exit()
