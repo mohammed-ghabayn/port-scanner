@@ -2,6 +2,7 @@ import socket
 from concurrent.futures import ThreadPoolExecutor
 import datetime
 import sys
+import os
 
 BLUE = "\033[94m"
 CYAN = "\033[96m"
@@ -91,7 +92,7 @@ try:
 
 except KeyboardInterrupt:
     print(f"\n\n\033[91m[-] Scan cancelled by user. Exiting...\033[0m")
-    sys.exit(0)
+    os._exit(0)
 
 
 
