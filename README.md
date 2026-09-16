@@ -1,7 +1,7 @@
 # 🔍 Python Port Scanner
 
 A fast, lightweight, and multi-threaded Command Line Interface (CLI) port scanner written in Python. It includes domain name resolution and basic service detection for open ports.
-![App Demo](demo.png)
+![App Demo](https://github.com/user-attachments/assets/efbdba3d-ffda-491b-9028-e982208e4efa)
 
 ---
 
